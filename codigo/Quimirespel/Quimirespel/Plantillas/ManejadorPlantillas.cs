@@ -203,7 +203,7 @@ namespace Quimirespel.Plantillas
             return contructoPiePagina.ToString();
         }
                 
-        public static string VisitaTecnicaSeccionMedia(VisitaTecnicaModel visitatecnica)
+        /*public static string VisitaTecnicaSeccionMedia(VisitaTecnicaModel visitatecnica)
         {
             var contructorVisitaTecnica = new StringBuilder();           
             contructorVisitaTecnica.Append("<tr>"); // linea 192          
@@ -269,6 +269,104 @@ namespace Quimirespel.Plantillas
             contructorVisitaTecnica.Append("</tr>");
             contructorVisitaTecnica.Append("</table></td>");
             contructorVisitaTecnica.Append("</tr>");
+            return contructorVisitaTecnica.ToString();
+        }*/
+        
+        public static string VisitaTecnicaSeccionMedia(VisitaTecnicaModel visitatecnica)
+        {
+            var contructorVisitaTecnica = new StringBuilder();
+            contructorVisitaTecnica.Append("<tr>"); //linea 117
+            contructorVisitaTecnica.Append("< td align = \"center\" class=\"cell - title\">2. INFORMACION DE RESIDUOS</td>");
+            contructorVisitaTecnica.Append(" </tr>");
+            contructorVisitaTecnica.Append(" <tr>");
+            contructorVisitaTecnica.Append(" <td><table width = \"100 % \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td width = \"9 % \" align=\"center\" class=\"cell - header\">CÓDIGO</td>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell - header\">DESCRIPCIÓN DE LA CORRIENTE DE RESIDUO</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append(" < td align = \"center\" class=\"cell - content\">ASDAQWE</td>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell - content\"><!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->");
+
+           
+            contructorVisitaTecnica.Append("CONTAMINACIÓN INDUSTRIAL PARA LA DEPURACIÓN DE LOS GASES INDUSTRIALES, PERO CON EXCLUSIÓN DE LOS DESECHOS ESPECIFICADOS EN LA LISTA B.<br/>");
+            contructorVisitaTecnica.Append(" </span></td>");
+            contructorVisitaTecnica.Append("  </tr>");
+            contructorVisitaTecnica.Append("</table></td>");
+            contructorVisitaTecnica.Append(" </tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append(" <td><table width = \"100%\" border= \"0\" cellpadding= \"0\" cellspacing= \"0\" class=\"itable\">");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-header\">NOMBRE RESIDUO</td>");
+            contructorVisitaTecnica.Append(" <td colspan = \"4\" align= \"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append(" <tr>");
+            contructorVisitaTecnica.Append("<td width = \"30%\" align=\"center\" class=\"cell-header\">CANTIDAD</td>");
+            contructorVisitaTecnica.Append("<td width = \"10%\" align=\"center\" class=\"cell-header\">UNIDAD</td>");
+            contructorVisitaTecnica.Append("<td width = \"10%\" align=\"center\" class=\"cell-header\">ESTADO</td>");
+            contructorVisitaTecnica.Append("<td width = \"30%\" align=\"center\" class=\"cell-header\">EMBALAJE</td>");
+            contructorVisitaTecnica.Append("<td width = \"20%\" align=\"center\" class=\"cell-header\">ESTADO DE EMBALAJE</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell-content\">200</td>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell-content\">kg</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">SÓLIDO</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">CAJA DE CARTÓN</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">BUENO</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append(" <tr>");
+            contructorVisitaTecnica.Append(" <td colspan = \"2\" align=\"center\" class=\"cell-header\">LOS RESIDUOS ESTAN BIEN ROTULADOS Y ETIQUETADOS</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">&nbsp;</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-header\">ESTADO ETIQUETA Y RÓTULO</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">&nbsp;</td>");
+            contructorVisitaTecnica.Append(" </tr>");
+            contructorVisitaTecnica.Append(" </table></td>");
+            contructorVisitaTecnica.Append(" </tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell-title\">");
+            contructorVisitaTecnica.Append("3. RESIDUOS CONTAMINADOS CON");
+            contructorVisitaTecnica.Append("</td>");
+            contructorVisitaTecnica.Append("  </tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td><table width = \"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructorVisitaTecnica.Append(" <tr>");
+            contructorVisitaTecnica.Append("<td width = \"42%\" align=\"center\" class=\"cell-header\">NOMBRE Y DESCRIPCIÓN DE MERCANCÍA PELIGROSA</td>");
+            contructorVisitaTecnica.Append("<td width = \"7%\" align= \"center\" class=\"cell-header\">N° ONU</td>");
+            contructorVisitaTecnica.Append(" <td width = \"6%\" align=\"center\" class=\"cell-header\">CLASE</td>");
+            contructorVisitaTecnica.Append("<td width = \"10%\" align=\"center\" class=\"cell-header\">DIVISIÓN</td>");
+            contructorVisitaTecnica.Append("<td width = \"17%\" align=\"center\" class=\"cell-header\">RIESGO SECUNDARIO</td>");
+            contructorVisitaTecnica.Append("<td width = \"18%\" align=\"center\" class=\"cell-header\">GRUPO EMBALAJE/ENVASE</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">ETANO LÍQUIDO REFRIGERADO</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">1234</td>");
+            contructorVisitaTecnica.Append(" <td align = \"center\" class=\"cell-content\">2</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">232</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">N/A</td>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">N/A</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("</table></td>");
+            contructorVisitaTecnica.Append(" </tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td><table width = \"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-title\">4. DESCRIPCIÓN</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("</table></td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td><table width = \"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-title\">5. OBSERVACIONES</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append("<tr>");
+            contructorVisitaTecnica.Append("<td align = \"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructorVisitaTecnica.Append("</tr>");
+            contructorVisitaTecnica.Append(" </table></td>");
+            contructorVisitaTecnica.Append(" </tr>");
             return contructorVisitaTecnica.ToString();
         }
     }
