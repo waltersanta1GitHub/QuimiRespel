@@ -18,7 +18,7 @@ namespace Quimirespel.Formularios
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            Get("00011311174021");
+            //Get("00011311174021");
         }
 
        private void Save()
