@@ -277,7 +277,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="Formularios\Laboratorio\CostosServicio.aspx" />
+    <Content Include="Formularios\CotizacionServicio.aspx" />
     <Content Include="Formularios\Laboratorio\AnalisisLaboratorio.aspx" />
     <Content Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx" />
     <Content Include="Formularios\Transporte\ListaVerificacionVehiculo.aspx" />
@@ -302,7 +302,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Formularios\CotizacionServicio.aspx" />
+    <Content Include="Formularios\Laboratorio\CostosServicio.aspx" />
     <Content Include="Formularios\RecoleccionMuestras.aspx" />
     <Content Include="Formularios\RequerimientoLogistico.aspx" />
     <Content Include="Formularios\RequerimientoServicio.aspx" />
@@ -502,19 +502,19 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CotizacionServicio.aspx.cs">
-      <DependentUpon>CotizacionServicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\CotizacionServicio.aspx.designer.cs">
-      <DependentUpon>CotizacionServicio.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Laboratorio\CostosServicio.aspx.cs">
       <DependentUpon>CostosServicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\Laboratorio\CostosServicio.aspx.designer.cs">
       <DependentUpon>CostosServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CotizacionServicio.aspx.cs">
+      <DependentUpon>CotizacionServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\CotizacionServicio.aspx.designer.cs">
+      <DependentUpon>CotizacionServicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Laboratorio\AnalisisLaboratorio.aspx.cs">
       <DependentUpon>AnalisisLaboratorio.aspx</DependentUpon>

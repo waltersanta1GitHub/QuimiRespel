@@ -1,30 +1,30 @@
-﻿using System;
-using Quimirespel.Data;
-using Quimirespel.Models;
+﻿using Quimirespel.Models;
+using System;
 using System.Collections.Generic;
+using Quimirespel.Data;
 using Quimirespel.Models.Tablas;
+using Quimirespel.Plantillas;
 
 namespace Quimirespel.Formularios.Laboratorio
 {
     public partial class CostosServicio : System.Web.UI.Page
     {
-        RepositorioAnalisisLaboratorio _repositorio;
+        private RepositorioCostosServicio _repositorio;
         private string NombreFormulario = "COSTOS DE SERVICIO";
 
         public CostosServicio() {
 
+            _repositorio = new RepositorioCostosServicio();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-
-
         private void Save()
         {
 
-            var model = new AnalisisLaboratorioModelo
+            var model = new CostosServicioModelo
             {
 
                 AsesorAsignado = "Juan Javier Molano",
@@ -62,78 +62,133 @@ namespace Quimirespel.Formularios.Laboratorio
 
 
                 // Propios
-                
-                TablaCaracterizacionMuestra= new List<AnalisisLaboratorioTablaUno>
-                {
-                    new AnalisisLaboratorioTablaUno {
 
-                        ComposicionToxica= new List<BaseModelo> { new BaseModelo { Valor="2321", Texto="Muy Toxico"} },
-                        FechaAnalisis="01/04/2017",
-                        FechaRecepcion="06/04/2017",
-                        Fisicos= new List<BaseModelo> { new BaseModelo { Valor="232",Texto="dskdks"} },
-                        NombreMuestra="My  Muestra",
-                        NumMuestra="M-34234",
-                        Peligrosidad= new List<BaseModelo> { new BaseModelo { Valor="1",Texto="Muy Peligroso" } }                        
-                    }
-                },
-                AnalisisBiologico= new List<AnalisisLaboratorioTablaDos>
-                {
-                    new AnalisisLaboratorioTablaDos {
-                        Cantidad="2",
-                        CantidadInsumo="3",
-                        Estado= new BaseModelo { Valor="12",Texto="Gaseoso"},
-                        Insumos="magnetita Jabonosa",
-                        NombreMuestra="La muestra",
-                        NumMuestra="M34343",
-                        TipoTratamiento= new BaseModelo {Valor="203",Texto="asdasdsa" },
-                        Unidad= new BaseModelo { Valor="12",Texto="KG"},
-                        UnidadInsumo= new BaseModelo { Valor="2",Texto="LT"}
-                    }
+                EnsayosAplicados=new List<CostosServicioTablaUno> {
 
-                },
-                AnalisisFisico=new List<AnalisisLaboratorioTablaDos> {
-                    new AnalisisLaboratorioTablaDos {
-                        Cantidad="2",
-                        CantidadInsumo="3",
-                        Estado= new BaseModelo { Valor="12",Texto="Gaseoso"},
-                        Insumos="magnetita Jabonosa",
-                        NombreMuestra="La muestra",
-                        NumMuestra="M34343",
-                        TipoTratamiento= new BaseModelo {Valor="203",Texto="asdasdsa" },
-                        Unidad= new BaseModelo { Valor="12",Texto="KG"},
-                        UnidadInsumo= new BaseModelo { Valor="2",Texto="LT"}
+                    new CostosServicioTablaUno {
+                        NumeroMuestra="MG-34232",
+                        TratamientoBiologico="Kadmio1",
+                        TratamientoFisico="Delta2",
+                        TratamientoQuimico="Korme1",
+                        TratamientoTermico="Isonil 23"
                     }
+                },
+               
+                CostoServicio= new List<CostosServicioTablaDos> {
+                    new CostosServicioTablaDos
+                    {
+                        Item="Costos de Tratamiento",
+                        NombreMuestra="My Tratamiento",
+                        NumeroMuestra="M-23232",
+                        ValorTratamiento=2000
 
-                },
-                AnalisisQuimico= new List<AnalisisLaboratorioTablaDos> {
-                    new AnalisisLaboratorioTablaDos {
-                        Cantidad="2",
-                        CantidadInsumo="3",
-                        Estado= new BaseModelo { Valor="12",Texto="Gaseoso"},
-                        Insumos="magnetita Jabonosa",
-                        NombreMuestra="La muestra",
-                        NumMuestra="M34343",
-                        TipoTratamiento= new BaseModelo {Valor="203",Texto="asdasdsa" },
-                        Unidad= new BaseModelo { Valor="12",Texto="KG"},
-                        UnidadInsumo= new BaseModelo { Valor="2",Texto="LT"}
-                    }
-                },
-                AnalisisTermico= new List<AnalisisLaboratorioTablaDos> {
-                    new AnalisisLaboratorioTablaDos {
-                        Cantidad="2",
-                        CantidadInsumo="3",
-                        Estado= new BaseModelo { Valor="12",Texto="Gaseoso"},
-                        Insumos="magnetita Jabonosa",
-                        NombreMuestra="La muestra",
-                        NumMuestra="M34343",
-                        TipoTratamiento= new BaseModelo {Valor="203",Texto="asdasdsa" },
-                        Unidad= new BaseModelo { Valor="12",Texto="KG"},
-                        UnidadInsumo= new BaseModelo { Valor="2",Texto="LT"}
+                    },
+                     new CostosServicioTablaDos
+                    {
+                        Item="Costos de Insumos",
+                        NombreMuestra="Pailillos de Cromo",
+                        NumeroMuestra="M-23231",
+                        ValorTratamiento=2000
+                    },
+                      new CostosServicioTablaDos
+                    {
+                        Item="Costos de Mano de Obra",
+                        NombreMuestra="Ingeniero+Ayudante",
+                        NumeroMuestra="M-23233",
+                        ValorTratamiento=2000
+
                     }
                 }
+
             };
 
             _repositorio.Save(model);
+        }
+
+        protected void btnImprimir_Click(object sender, EventArgs e)
+        {
+            PrintService imprime = new PrintService();
+
+            var modelo = new CostosServicioModelo
+            {
+
+                AsesorAsignado = "Juan Javier Molano",
+                Cargo = "Tecnico Sena",
+                Celular = "3145657654",
+                CIIU = new BaseModelo { Valor = "12345", Texto = "Sample CIIU" },
+                Ciudad = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Quindio", NomMunicipio = "Quimbaya" },
+                MunicipioDiligencia = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Atlantico", NomMunicipio = "barranquilla" },
+                ClosedDate = "02/03/2017",
+                CreatedDate = "02/03/2017",
+                DiligenciadoPor = "Jose Antonio Garcia",
+                DirAdmin = "Cll 45  23 -24 oficina 203",
+                DirOperativa = "Parque industrial el Torque,Km 8 Via al Mar",
+                Editable = false,
+                Eliminado = false,
+                Email = "sample@sas.com",
+                Extencion = "123",
+                Fecha = "04/03/2017",
+                Hora = "06:04",
+                FechaAsignadaVisita = "06/07/2017",
+                HoraAsisgnadaVisita = "05:04",
+                IdFormulario = "0001" + DateTime.Now.ToString("ddMyms"),
+                NombreFormulario = NombreFormulario,
+                NumUnico = "RECM-0001" + DateTime.Now.ToString("ddMyms"),
+                LogDocumentos = new List<BaseModelo> {
+                    new BaseModelo { Valor="NumVisita",Texto= "0001" + DateTime.Now.ToString("ddMyms")},
+                    new BaseModelo { Valor="NumRequerimientoServicio",Texto="REQ-0001" + DateTime.Now.ToString("ddMyms") },
+                    new BaseModelo { Valor="NumRequerimientoLogistico",Texto="REL-0001" + DateTime.Now.ToString("ddMyms") },
+                    new BaseModelo { Valor="NumRecoleccionMuestra",Texto="RECM-0001" + DateTime.Now.ToString("ddMyms") }
+                },
+                Printed = false,
+                RecomendacionesIngreso = "Perro Bravo, timbrar en porteria",
+                Telefono = "2343454",
+                Visible = true,
+
+
+                // Propios
+
+                EnsayosAplicados = new List<CostosServicioTablaUno> {
+
+                    new CostosServicioTablaUno {
+                        NumeroMuestra="MG-34232",
+                        TratamientoBiologico="Kadmio1",
+                        TratamientoFisico="Delta2",
+                        TratamientoQuimico="Korme1",
+                        TratamientoTermico="Isonil 23"
+                    }
+                },
+
+                CostoServicio = new List<CostosServicioTablaDos> {
+                    new CostosServicioTablaDos
+                    {
+                        Item="Costos de Tratamiento",
+                        NombreMuestra="My Tratamiento",
+                        NumeroMuestra="M-23232",
+                        ValorTratamiento=2000
+
+                    },
+                     new CostosServicioTablaDos
+                    {
+                        Item="Costos de Insumos",
+                        NombreMuestra="Pailillos de Cromo",
+                        NumeroMuestra="M-23231",
+                        ValorTratamiento=2000
+                    },
+                      new CostosServicioTablaDos
+                    {
+                        Item="Costos de Mano de Obra",
+                        NombreMuestra="Ingeniero+Ayudante",
+                        NumeroMuestra="M-23233",
+                        ValorTratamiento=2000
+
+                    }
+                }
+
+            };
+
+            string html = ManejadorPlantillas.GenerarPlantillaCompletaSiete(modelo);
+            imprime.PruebaDocumentoVisita(html);
         }
     }
 }
