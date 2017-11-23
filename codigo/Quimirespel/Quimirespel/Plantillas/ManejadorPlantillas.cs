@@ -100,6 +100,15 @@ namespace Quimirespel.Plantillas
             return plantillatotal.ToString();
         }
 
+        /*public static string GenerarPlantillaCompletaOnce(PlanificacionCargueModelo planificacionCargue)
+        {
+            var plantillatotal = new StringBuilder();
+            plantillatotal.Append(EncabezadoPaginaOnce("PROGRAMACION SERVICIO", "1425898", planificacionCargue));
+            plantillatotal.Append(VisitaTecnicaSeccionMediaOnce(planificacionCargue));
+            plantillatotal.Append(PiepaginaOmce(planificacionCargue));
+            return plantillatotal.ToString();
+        }*/
+
         public static string GenerarPlantillaSeccionMediaPiePagina()
         {
             return "";
@@ -1058,6 +1067,41 @@ namespace Quimirespel.Plantillas
             return contructoEncabezado.ToString();
         }
 
+        /*static string EncabezadoPaginaOnce(string titulo, string viencia, ProgramacionServicioModelo programacionServicio)
+        {
+            var contructoEncabezado = new StringBuilder();
+            contructoEncabezado.Append("<!DOCTYPE html PUBLIC \" -//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\" >");
+            contructoEncabezado.Append("<html xmlns=\"http://www.w3.org/1999/xhtml\" >");
+            contructoEncabezado.Append("<head>");
+            contructoEncabezado.Append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />");
+            contructoEncabezado.Append("<title> " + titulo + " </title>");
+            contructoEncabezado.Append("<style type=\"text/css\"> " + estilos + " </style>");
+            contructoEncabezado.Append("</head>");
+            contructoEncabezado.Append("<body> ");
+            contructoEncabezado.Append("<table width=\"800\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td height=\"138\"><table width=\"100% \" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td height=\"115\"><table width=\"100% \" border=\"1px\" cellspacing=\"0\" cellpadding=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"153\" rowspan=\"2\" align=\"center\"> <img src=\"" + imagen + "\" width=\"130\" height=\"113\" /> </td>");
+            contructoEncabezado.Append("<td width=\"375\" rowspan=\"2\" align=\"center\" class=\"cell-header\"><strong>" + titulo + "</strong></td>");
+            contructoEncabezado.Append("<td width=\"264\" height=\"76\" align=\"center\" class=\"cell-header\" > VERSION: 1</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\" > VIGENCIA: " + viencia + "</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td>&nbsp;</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+
+            return contructoEncabezado.ToString();
+        }*/
+
 
         static string Piepagina(VisitaTecnicaModel visitatecnica)
         {
@@ -1639,6 +1683,63 @@ namespace Quimirespel.Plantillas
             return contructoPiePagina.ToString();
         }
 
+        /*static string PiepaginaOnce(PlanificacionCargueModelo planificacionCargue)
+        {
+            var contructoPiePagina = new StringBuilder();
+            contructoPiePagina.Append("<tr><td align=\"center\" class=\"cell-title\">5. INFORMACIÓN DEL REPRESENTANTE DE EMPRESA GENERADORA</td></tr>"); // linea 179
+            contructoPiePagina.Append("<tr><td><table width=\"100% \" border =\"0\" cellpadding =\"0\" cellspacing =\"0\" class=\"itable\" > ");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DILIGENCIADO POR:</td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-content-info\"><span class=\"cell - content\">Lorem ipsum dolor sit amet</span></td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-header-info\">N°  SOLICITUD DE VISITA</td>");
+            contructoPiePagina.Append("<td class=\"cell-content-info\">8989898</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td width=\"16% \" class=\"cell-header-info\">CARGO</td>");
+            contructoPiePagina.Append("<td colspan=\"4\" class=\"cell-content-info\"><span class=\"cell - content\">Lorem ipsum dolor sit amet</span></td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-header-info\">FECHA</td>");
+            contructoPiePagina.Append("<td width=\"11% \" class=\"cell-content-info\">00/00/0000</td>");
+            contructoPiePagina.Append("<td width=\"9% \" class=\"cell-header-info\">HORA</td>");
+            contructoPiePagina.Append("<td width=\"9% \" class=\"cell-content-info\">00;00</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header - info\">TELEFONO</td>");
+            contructoPiePagina.Append("<td width=\"13% \" class=\"cell-content-info\">0000000</td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-header-info\">EXT</td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-content-info\">0000</td>");
+            contructoPiePagina.Append("<td width=\"12% \" class=\"cell-header-info\">N° CELULAR</td>");
+            contructoPiePagina.Append("<td colspan=\"4\" class=\"cell-content-info\">0000000000</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header-info\">E-MAIL</td>");
+            contructoPiePagina.Append("<td colspan=\"8\" class=\"cell-content-info\">asdasdasd@asdasdas.asd</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header - info\">MUNICIPIO</td>");
+            contructoPiePagina.Append("<td colspan=\"5\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.MunicipioDiligencia.NomMunicipio + "</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DEPARTAMENTO</td>");
+            contructoPiePagina.Append("<td class=\"cell-content-info\">" + planificacionCargue.MunicipioDiligencia.NomDepto + "</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DIRECCION ADMINISTRATIVA</td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.DirAdmin + "</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\"><span class=\"cell-header-info\">DIRECCIÓN OPERATIVA</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.DirOperativa + "</span></td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("</table></td></tr>");
+            contructoPiePagina.Append("</table></td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td align=\"center\">&nbsp;</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td>&nbsp;</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("</table>");
+            contructoPiePagina.Append("</body>");
+            contructoPiePagina.Append("</html>");
+            return contructoPiePagina.ToString();
+        }*/
 
 
         public static string VisitaTecnicaSeccionMedia(VisitaTecnicaModel visitatecnica)
