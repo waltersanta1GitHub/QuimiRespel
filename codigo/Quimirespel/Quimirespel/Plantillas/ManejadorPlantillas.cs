@@ -91,6 +91,15 @@ namespace Quimirespel.Plantillas
             return plantillatotal.ToString();
         }
 
+        public static string GenerarPlantillaCompletaDiez(PlanificacionCargueModelo planificacionCargue)
+        {
+            var plantillatotal = new StringBuilder();
+            plantillatotal.Append(EncabezadoPaginaDiez("PLANIFICACION CARGUE", "1425898", planificacionCargue));
+            plantillatotal.Append(PlanificacionCargueSeccionMedia(planificacionCargue));
+            plantillatotal.Append(PiepaginaDiez(planificacionCargue));
+            return plantillatotal.ToString();
+        }
+
         public static string GenerarPlantillaSeccionMediaPiePagina()
         {
             return "";
@@ -950,6 +959,105 @@ namespace Quimirespel.Plantillas
             return contructoEncabezado.ToString();
         }
 
+        static string EncabezadoPaginaDiez(string titulo, string viencia, PlanificacionCargueModelo planificacionCargue)
+        {
+            var contructoEncabezado = new StringBuilder();
+            contructoEncabezado.Append("<!DOCTYPE html PUBLIC \" -//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\" >");
+            contructoEncabezado.Append("<html xmlns=\"http://www.w3.org/1999/xhtml\" >");
+            contructoEncabezado.Append("<head>");
+            contructoEncabezado.Append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />");
+            contructoEncabezado.Append("<title> " + titulo + " </title>");
+            contructoEncabezado.Append("<style type=\"text/css\"> " + estilos + " </style>");
+            contructoEncabezado.Append("</head>");
+            contructoEncabezado.Append("<body> ");
+            contructoEncabezado.Append("<table width=\"800\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td height=\"138\"><table width=\"100% \" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td height=\"115\"><table width=\"100% \" border=\"1px\" cellspacing=\"0\" cellpadding=\"0\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"153\" rowspan=\"2\" align=\"center\"> <img src=\"" + imagen + "\" width=\"130\" height=\"113\" /> </td>");
+            contructoEncabezado.Append("<td width=\"375\" rowspan=\"2\" align=\"center\" class=\"cell-header\"><strong>" + titulo + "</strong></td>");
+            contructoEncabezado.Append("<td width=\"264\" height=\"76\" align=\"center\" class=\"cell-header\" > VERSION: 1</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\" > VIGENCIA: " + viencia + "</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td>&nbsp;</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" ><table width=\"803\" border =\"1\" cellspacing =\"0\" cellpadding =\"0\" > ");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"799\" align =\"center\" class=\"cell-title\" > 1. INFORMACION DEL GENERADOR</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\" ><strong>ACTIVIDAD ECONOMICA</strong></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td><table width=\"100% \" cellpadding =\"0\" cellspacing =\"0\" class=\"itable\" > ");
+            contructoEncabezado.Append("<tr class=\"cell-header\"> ");
+            contructoEncabezado.Append("<td width=\"209\" align =\"center\" class=\"cell-header\" ><strong>CÓDIGO CIIU</strong></td>");
+            contructoEncabezado.Append("<td width=\"591\" align =\"center\" class=\"cell-header\" ><strong>DESCRIPCIÓN</strong></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\" >" + planificacionCargue.CIIU.Valor + "</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\" >" + planificacionCargue.CIIU.Texto + "</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr class=\"cell - content\">");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\">RAZÓN SOCIAL</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">Lorem ipsum dolor sit amet</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr class=\"cell - content\">");  // Linea 52
+            contructoEncabezado.Append("<td colspan=\"2\" align=\"center\" ><table width=\"100% \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\"><strong>NIT</strong></td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\"><strong>CIUDAD</strong></td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\"><strong>MUNICIPIO</strong></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"33% \" align=\"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructoEncabezado.Append("<td width=\"33% \" align=\"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-content\">Lorem ipsum dolor sit amet</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td><table width=\"100% \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\">TELEFONO</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\"><strong>DIRECCION</strong></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"40% \" height=\"133\" align=\"center\" class=\"cell - content\">" + planificacionCargue.Telefono.ToUpper() + "</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">" + planificacionCargue.DirOperativa.ToUpper() + "</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td><table width=\"100% \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\">NOMBRE DE CONTACTO</td>");
+            contructoEncabezado.Append("<td width=\"35% \" align=\"center\" class=\"cell-header\">CELULAR</td>");
+            contructoEncabezado.Append("<td width=\"23% \" align=\"center\" class=\"cell-header\">E-MAIL</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("<tr>");
+            contructoEncabezado.Append("<td width=\"40% \" align=\"center\" class=\"cell - content\">Lorem ipsum dolor sit amet</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">" + planificacionCargue.Celular.ToUpper() + "</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">" + planificacionCargue.Email.ToUpper() + "</td>");
+            contructoEncabezado.Append("</tr>");
+            contructoEncabezado.Append("</table></td>");
+            contructoEncabezado.Append("</tr>");
+
+            return contructoEncabezado.ToString();
+        }
+
 
         static string Piepagina(VisitaTecnicaModel visitatecnica)
         {
@@ -1472,6 +1580,65 @@ namespace Quimirespel.Plantillas
             contructoPiePagina.Append("</html>");
             return contructoPiePagina.ToString();
         }
+
+        static string PiepaginaDiez(PlanificacionCargueModelo planificacionCargue)
+        {
+            var contructoPiePagina = new StringBuilder();
+            contructoPiePagina.Append("<tr><td align=\"center\" class=\"cell-title\">5. INFORMACIÓN DEL REPRESENTANTE DE EMPRESA GENERADORA</td></tr>"); // linea 179
+            contructoPiePagina.Append("<tr><td><table width=\"100% \" border =\"0\" cellpadding =\"0\" cellspacing =\"0\" class=\"itable\" > ");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DILIGENCIADO POR:</td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-content-info\"><span class=\"cell - content\">Lorem ipsum dolor sit amet</span></td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-header-info\">N°  SOLICITUD DE VISITA</td>");
+            contructoPiePagina.Append("<td class=\"cell-content-info\">8989898</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td width=\"16% \" class=\"cell-header-info\">CARGO</td>");
+            contructoPiePagina.Append("<td colspan=\"4\" class=\"cell-content-info\"><span class=\"cell - content\">Lorem ipsum dolor sit amet</span></td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-header-info\">FECHA</td>");
+            contructoPiePagina.Append("<td width=\"11% \" class=\"cell-content-info\">00/00/0000</td>");
+            contructoPiePagina.Append("<td width=\"9% \" class=\"cell-header-info\">HORA</td>");
+            contructoPiePagina.Append("<td width=\"9% \" class=\"cell-content-info\">00;00</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header - info\">TELEFONO</td>");
+            contructoPiePagina.Append("<td width=\"13% \" class=\"cell-content-info\">0000000</td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-header-info\">EXT</td>");
+            contructoPiePagina.Append("<td width=\"10% \" class=\"cell-content-info\">0000</td>");
+            contructoPiePagina.Append("<td width=\"12% \" class=\"cell-header-info\">N° CELULAR</td>");
+            contructoPiePagina.Append("<td colspan=\"4\" class=\"cell-content-info\">0000000000</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header-info\">E-MAIL</td>");
+            contructoPiePagina.Append("<td colspan=\"8\" class=\"cell-content-info\">asdasdasd@asdasdas.asd</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td class=\"cell-header - info\">MUNICIPIO</td>");
+            contructoPiePagina.Append("<td colspan=\"5\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.MunicipioDiligencia.NomMunicipio + "</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DEPARTAMENTO</td>");
+            contructoPiePagina.Append("<td class=\"cell-content-info\">" + planificacionCargue.MunicipioDiligencia.NomDepto + "</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DIRECCION ADMINISTRATIVA</td>");
+            contructoPiePagina.Append("<td colspan=\"3\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.DirAdmin + "</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\"><span class=\"cell-header-info\">DIRECCIÓN OPERATIVA</span></td>");
+            contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-content-info\"><span class=\"cell - content\">" + planificacionCargue.DirOperativa + "</span></td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("</table></td></tr>");
+            contructoPiePagina.Append("</table></td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td align=\"center\">&nbsp;</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("<tr>");
+            contructoPiePagina.Append("<td>&nbsp;</td>");
+            contructoPiePagina.Append("</tr>");
+            contructoPiePagina.Append("</table>");
+            contructoPiePagina.Append("</body>");
+            contructoPiePagina.Append("</html>");
+            return contructoPiePagina.ToString();
+        }
+
 
 
         public static string VisitaTecnicaSeccionMedia(VisitaTecnicaModel visitatecnica)
@@ -2579,62 +2746,144 @@ namespace Quimirespel.Plantillas
             return constructorManifiestoCarga.ToString();
         }
 
-        public static string VisitaTecnicaSeccionMediaDiez(VisitaTecnicaModel visitatecnica)
+        public static string PlanificacionCargueSeccionMedia(PlanificacionCargueModelo planificacionCargue)
         {
-            var contructorVisitaTecnica = new StringBuilder();
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            contructorVisitaTecnica.Append("");
-            return contructorVisitaTecnica.ToString();
+            var constructorPlanificacionCargue = new StringBuilder();
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - title\">2. PLANIFICACION DEL SERVICIO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td><table width=\"100 % \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            constructorPlanificacionCargue.Append("<tr class=\"cell - header\">");
+            constructorPlanificacionCargue.Append("<td width=\"10 % \" align=\"center\" class=\"cell - header\">FECHA DE SERVICIO</td>");
+            constructorPlanificacionCargue.Append("<td width=\"10 % \" align=\"center\">PLACA DE VEHÍCULO</td>");
+            constructorPlanificacionCargue.Append("<td width=\"10 % \" align=\"center\">TIPO DE VEHÍCULO</td>");
+            constructorPlanificacionCargue.Append("<td width=\"10 % \" align=\"center\">CAPACIDAD DE VEHÍCULO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">asd</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">asdad</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">Ph7</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">Explosivo</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("</table>");
+            constructorPlanificacionCargue.Append(" <table width=\"100 % \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td width=\"33 % \" align=\"center\" class=\"cell - header\">RUTA 1 </td>");
+            constructorPlanificacionCargue.Append("<td width=\"33 % \" align=\"center\" class=\"cell - header\">RUTA 2</td>");
+            constructorPlanificacionCargue.Append("<td width=\"33 % \" align=\"center\" class=\"cell - header\">RUTA 3 </td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append(" <td align=\"center\" class=\"cell - header\">HORA DE SALIDAD</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">HORA DE LLEGADA A DESTINO</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">HORA MAXIMA DE LLEGADA A DESTINO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append(" <td align=\"center\" class=\"cell - header\">NOMBRE CONDUCTOR</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">NOMBRE AUXILIAR</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">NOMBRE OPERARIO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("</table></td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - title\">3.REQUERIMIENTO  DEL SERVICIO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append(" <td><table width=\"100 % \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            constructorPlanificacionCargue.Append("<tr class=\"cell - header\">");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">TIPO DE SERVCIO</td>");
+            constructorPlanificacionCargue.Append("<td width=\"50 % \" align=\"center\">HERRAMIENTAS DEL SERVICIO</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td width=\"50 % \" align=\"center\" class=\"cell - content\">asdasdad</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">Ph7ExplosivoMetales Tóxicos</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("</table>");
+            constructorPlanificacionCargue.Append("<table width=\"100 % \" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"itable\">");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td width=\"20 % \" align=\"center\" class=\"cell - header\">RECURSO</td>");
+            constructorPlanificacionCargue.Append("<td width=\"40 % \" align=\"center\" class=\"cell - header\">CANTIDAD</td>");
+            constructorPlanificacionCargue.Append("<td width=\"40 % \" align=\"center\" class=\"cell - header\">DESCRIPCION</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">RÓTULOS </td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">ETIQUETAS </td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">PLACA N° UN</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">KIT DE DERRAME</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">EPP </td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">KIT ASEO</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">MOTOBOMBA</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">EMBALAJE</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">MANGUERA </td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">ACOPLES</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - header\">PERSONAL</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("<td align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td colspan=\"3\" align=\"center\" class=\"cell - header\">OBSERVACIONES:</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("<tr>");
+            constructorPlanificacionCargue.Append("<td colspan=\"3\" align=\"center\" class=\"cell - content\">&nbsp;</td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            constructorPlanificacionCargue.Append("</table></td>");
+            constructorPlanificacionCargue.Append("</tr>");
+            return constructorPlanificacionCargue.ToString();
         }
 
         public static string VisitaTecnicaSeccionMediaOnce(VisitaTecnicaModel visitatecnica)
