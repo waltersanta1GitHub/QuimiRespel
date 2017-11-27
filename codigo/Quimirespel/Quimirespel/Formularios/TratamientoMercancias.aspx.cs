@@ -1,40 +1,40 @@
 ﻿using System;
+using Quimirespel.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Quimirespel.Data;
 using Quimirespel.Models;
-using Quimirespel.Models.Tablas;
 using Quimirespel.Plantillas;
 
-namespace Quimirespel.Formularios.Transporte
+namespace Quimirespel.Formularios
 {
-    public partial class ListaVerificacionVehiculo : System.Web.UI.Page
+    public partial class TratamientoMercancias : System.Web.UI.Page
     {
-        private RepositorioListaVerificacionVehiculo _repositorio;
-        private string NombreFormulario = "LISTA VERIFICACION VEHICULO";
+        RepositorioTratamientoMercancias _repositorio;
+        private string NombreFormulario = "TRATAMIENTO-MERCANCIA";
 
-        public ListaVerificacionVehiculo()
+        public TratamientoMercancias()
         {
-
-            _repositorio = new RepositorioListaVerificacionVehiculo();
+            _repositorio = new RepositorioTratamientoMercancias();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-
         private void Save()
         {
 
-            var model = new ListaVerificacionModel
+            var modelo = new TratamientoMercanciasModelo
             {
                 AsesorAsignado = "Juan Javier Molano",
                 Cargo = "Tecnico Sena",
                 Celular = "3145657654",
+                CIIU = new BaseModelo { Valor = "12345", Texto = "Sample CIIU" },
+                Ciudad = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Quindio", NomMunicipio = "Quimbaya" },
                 MunicipioDiligencia = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Atlantico", NomMunicipio = "barranquilla" },
                 ClosedDate = "02/03/2017",
                 CreatedDate = "02/03/2017",
@@ -61,29 +61,22 @@ namespace Quimirespel.Formularios.Transporte
                 RecomendacionesIngreso = "Perro Bravo, timbrar en porteria",
                 Telefono = "2343454",
                 Visible = true,
-
-
-                // propios
-                ListaPreguntas = new List<Preguntas>
-               {
-                   new Preguntas { Item="1.1",Pregunta="¿El personal porta la cedula de ciudadanía?",Respuesta=false},
-                   new Preguntas { Item="1.2",Pregunta="¿El conductor porta la licencia vigente de conducir de acuerdo a la categoría autorizada?",Respuesta=false },
-                   new Preguntas { Item="1.3",Pregunta="¿El personal se encuentra capacitado para el transporte de residuos y mercancías peligrosos?",Respuesta=false }
-                }
             };
 
-            _repositorio.Save(model);
+            _repositorio.Save(modelo);
         }
 
         protected void btnImprimir_Click(object sender, EventArgs e)
         {
             PrintService imprime = new PrintService();
 
-            var model = new ListaVerificacionModel
+            var modelo = new TratamientoMercanciasModelo
             {
                 AsesorAsignado = "Juan Javier Molano",
                 Cargo = "Tecnico Sena",
                 Celular = "3145657654",
+                CIIU = new BaseModelo { Valor = "12345", Texto = "Sample CIIU" },
+                Ciudad = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Quindio", NomMunicipio = "Quimbaya" },
                 MunicipioDiligencia = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Atlantico", NomMunicipio = "barranquilla" },
                 ClosedDate = "02/03/2017",
                 CreatedDate = "02/03/2017",
@@ -110,19 +103,10 @@ namespace Quimirespel.Formularios.Transporte
                 RecomendacionesIngreso = "Perro Bravo, timbrar en porteria",
                 Telefono = "2343454",
                 Visible = true,
-
-
-                // propios
-                ListaPreguntas = new List<Preguntas>
-               {
-                   new Preguntas { Item="1.1",Pregunta="¿El personal porta la cedula de ciudadanía?",Respuesta=false},
-                   new Preguntas { Item="1.2",Pregunta="¿El conductor porta la licencia vigente de conducir de acuerdo a la categoría autorizada?",Respuesta=false },
-                   new Preguntas { Item="1.3",Pregunta="¿El personal se encuentra capacitado para el transporte de residuos y mercancías peligrosos?",Respuesta=false }
-                }
             };
-
-            string html = ManejadorPlantillas.GenerarPlantillaCompletaOnce(model);
+            string html = ManejadorPlantillas.GenerarPlantillaCompletaTrece(modelo);
             imprime.PruebaDocumentoVisita(html);
+
         }
     }
 }

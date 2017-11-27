@@ -141,8 +141,8 @@ namespace Quimirespel.Formularios.Operativa
                 }
             };
 
-            //string html = ManejadorPlantillas.GenerarPlantillaCompletaDos(model);
-            //imprime.PruebaDocumentoVisita(html);
+            string html = ManejadorPlantillas.GenerarPlantillaCompletaDoce(model);
+            imprime.PruebaDocumentoVisita(html);
         }
     }
 }

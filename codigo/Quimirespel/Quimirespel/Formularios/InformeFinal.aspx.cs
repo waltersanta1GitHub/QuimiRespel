@@ -1,40 +1,38 @@
-﻿using System;
+﻿using Quimirespel.Data;
+using Quimirespel.Models;
+using Quimirespel.Plantillas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Quimirespel.Data;
-using Quimirespel.Models;
-using Quimirespel.Models.Tablas;
-using Quimirespel.Plantillas;
 
-namespace Quimirespel.Formularios.Transporte
+namespace Quimirespel.Formularios
 {
-    public partial class ListaVerificacionVehiculo : System.Web.UI.Page
+    public partial class InformeFinal : System.Web.UI.Page
     {
-        private RepositorioListaVerificacionVehiculo _repositorio;
-        private string NombreFormulario = "LISTA VERIFICACION VEHICULO";
 
-        public ListaVerificacionVehiculo()
-        {
+        RepositorioInformeFinal _repositorio;
+        private string NombreFormulario = "INFORME FINAL";
 
-            _repositorio = new RepositorioListaVerificacionVehiculo();
-        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            _repositorio = new RepositorioInformeFinal();
         }
-
 
         private void Save()
         {
 
-            var model = new ListaVerificacionModel
+            var model = new InformeFinalModelo
             {
+
                 AsesorAsignado = "Juan Javier Molano",
                 Cargo = "Tecnico Sena",
                 Celular = "3145657654",
+                CIIU = new BaseModelo { Valor = "12345", Texto = "Sample CIIU" },
+                Ciudad = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Quindio", NomMunicipio = "Quimbaya" },
                 MunicipioDiligencia = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Atlantico", NomMunicipio = "barranquilla" },
                 ClosedDate = "02/03/2017",
                 CreatedDate = "02/03/2017",
@@ -51,25 +49,17 @@ namespace Quimirespel.Formularios.Transporte
                 HoraAsisgnadaVisita = "05:04",
                 IdFormulario = "0001" + DateTime.Now.ToString("ddMyms"),
                 NombreFormulario = NombreFormulario,
-                NumUnico = "REL-0001" + DateTime.Now.ToString("ddMyms"),
+                NumUnico = "RECM-0001" + DateTime.Now.ToString("ddMyms"),
                 LogDocumentos = new List<BaseModelo> {
                     new BaseModelo { Valor="NumVisita",Texto= "0001" + DateTime.Now.ToString("ddMyms")},
                     new BaseModelo { Valor="NumRequerimientoServicio",Texto="REQ-0001" + DateTime.Now.ToString("ddMyms") },
-                    new BaseModelo { Valor="NumRequerimientoLogistico",Texto="REL-0001" + DateTime.Now.ToString("ddMyms") }
+                    new BaseModelo { Valor="NumRequerimientoLogistico",Texto="REL-0001" + DateTime.Now.ToString("ddMyms") },
+                    new BaseModelo { Valor="NumRecoleccionMuestra",Texto="RECM-0001" + DateTime.Now.ToString("ddMyms") }
                 },
                 Printed = false,
                 RecomendacionesIngreso = "Perro Bravo, timbrar en porteria",
                 Telefono = "2343454",
                 Visible = true,
-
-
-                // propios
-                ListaPreguntas = new List<Preguntas>
-               {
-                   new Preguntas { Item="1.1",Pregunta="¿El personal porta la cedula de ciudadanía?",Respuesta=false},
-                   new Preguntas { Item="1.2",Pregunta="¿El conductor porta la licencia vigente de conducir de acuerdo a la categoría autorizada?",Respuesta=false },
-                   new Preguntas { Item="1.3",Pregunta="¿El personal se encuentra capacitado para el transporte de residuos y mercancías peligrosos?",Respuesta=false }
-                }
             };
 
             _repositorio.Save(model);
@@ -79,11 +69,14 @@ namespace Quimirespel.Formularios.Transporte
         {
             PrintService imprime = new PrintService();
 
-            var model = new ListaVerificacionModel
+            var model = new InformeFinalModelo
             {
+
                 AsesorAsignado = "Juan Javier Molano",
                 Cargo = "Tecnico Sena",
                 Celular = "3145657654",
+                CIIU = new BaseModelo { Valor = "12345", Texto = "Sample CIIU" },
+                Ciudad = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Quindio", NomMunicipio = "Quimbaya" },
                 MunicipioDiligencia = new CiudadModelo { IdDepto = "22", IdMunicipio = "32", NomDepto = "Atlantico", NomMunicipio = "barranquilla" },
                 ClosedDate = "02/03/2017",
                 CreatedDate = "02/03/2017",
@@ -100,11 +93,12 @@ namespace Quimirespel.Formularios.Transporte
                 HoraAsisgnadaVisita = "05:04",
                 IdFormulario = "0001" + DateTime.Now.ToString("ddMyms"),
                 NombreFormulario = NombreFormulario,
-                NumUnico = "REL-0001" + DateTime.Now.ToString("ddMyms"),
+                NumUnico = "RECM-0001" + DateTime.Now.ToString("ddMyms"),
                 LogDocumentos = new List<BaseModelo> {
                     new BaseModelo { Valor="NumVisita",Texto= "0001" + DateTime.Now.ToString("ddMyms")},
                     new BaseModelo { Valor="NumRequerimientoServicio",Texto="REQ-0001" + DateTime.Now.ToString("ddMyms") },
-                    new BaseModelo { Valor="NumRequerimientoLogistico",Texto="REL-0001" + DateTime.Now.ToString("ddMyms") }
+                    new BaseModelo { Valor="NumRequerimientoLogistico",Texto="REL-0001" + DateTime.Now.ToString("ddMyms") },
+                    new BaseModelo { Valor="NumRecoleccionMuestra",Texto="RECM-0001" + DateTime.Now.ToString("ddMyms") }
                 },
                 Printed = false,
                 RecomendacionesIngreso = "Perro Bravo, timbrar en porteria",
@@ -112,16 +106,9 @@ namespace Quimirespel.Formularios.Transporte
                 Visible = true,
 
 
-                // propios
-                ListaPreguntas = new List<Preguntas>
-               {
-                   new Preguntas { Item="1.1",Pregunta="¿El personal porta la cedula de ciudadanía?",Respuesta=false},
-                   new Preguntas { Item="1.2",Pregunta="¿El conductor porta la licencia vigente de conducir de acuerdo a la categoría autorizada?",Respuesta=false },
-                   new Preguntas { Item="1.3",Pregunta="¿El personal se encuentra capacitado para el transporte de residuos y mercancías peligrosos?",Respuesta=false }
-                }
-            };
 
-            string html = ManejadorPlantillas.GenerarPlantillaCompletaOnce(model);
+            };
+            string html = ManejadorPlantillas.GenerarPlantillaCompletaQuince(model);
             imprime.PruebaDocumentoVisita(html);
         }
     }

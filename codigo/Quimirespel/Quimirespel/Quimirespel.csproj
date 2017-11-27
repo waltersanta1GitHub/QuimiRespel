@@ -278,12 +278,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Formularios\CotizacionServicio.aspx" />
+    <Content Include="Formularios\InformeFinal.aspx" />
     <Content Include="Formularios\Laboratorio\AnalisisLaboratorio.aspx" />
     <Content Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx" />
+    <Content Include="Formularios\PlanificacionDisposicion.aspx" />
     <Content Include="Formularios\Transporte\ListaVerificacionVehiculo.aspx" />
     <Content Include="Formularios\Transporte\ManifiestoCarga.aspx" />
     <Content Include="Formularios\Transporte\PlanificacionCargue.aspx" />
     <Content Include="Formularios\Transporte\ProgramacionServicio.aspx" />
+    <Content Include="Formularios\TratamientoMercancias.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="Imagenes\icon.jpg" />
     <Content Include="libeay32.dll">
@@ -487,6 +490,9 @@
     <Compile Include="Data\RepositorioAnalisisLaboratorio.cs" />
     <Compile Include="Data\RepositorioCostosServicio.cs" />
     <Compile Include="Data\RepositorioPlanificacionCargue.cs" />
+    <Compile Include="Data\RepositorioInformeFinal.cs" />
+    <Compile Include="Data\RepositorioTratamientoMercancias.cs" />
+    <Compile Include="Data\RepositorioPlanificacionDisposicion.cs" />
     <Compile Include="Data\RepositorioRecoleccionMuestra.cs" />
     <Compile Include="Data\RepositorioProgramacionServicio.cs" />
     <Compile Include="Data\RepositorioReqLogistico.cs" />
@@ -501,6 +507,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\InformeFinal.aspx.cs">
+      <DependentUpon>InformeFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\InformeFinal.aspx.designer.cs">
+      <DependentUpon>InformeFinal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Laboratorio\CostosServicio.aspx.cs">
       <DependentUpon>CostosServicio.aspx</DependentUpon>
@@ -529,6 +542,13 @@
     </Compile>
     <Compile Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx.designer.cs">
       <DependentUpon>RecepcionVerificacionMercancias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PlanificacionDisposicion.aspx.cs">
+      <DependentUpon>PlanificacionDisposicion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\PlanificacionDisposicion.aspx.designer.cs">
+      <DependentUpon>PlanificacionDisposicion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\RecoleccionMuestras.aspx.cs">
       <DependentUpon>RecoleccionMuestras.aspx</DependentUpon>
@@ -579,6 +599,13 @@
     <Compile Include="Formularios\Transporte\ProgramacionServicio.aspx.designer.cs">
       <DependentUpon>ProgramacionServicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TratamientoMercancias.aspx.cs">
+      <DependentUpon>TratamientoMercancias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\TratamientoMercancias.aspx.designer.cs">
+      <DependentUpon>TratamientoMercancias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VisitaTecnica.aspx.cs">
       <DependentUpon>VisitaTecnica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -600,6 +627,9 @@
     <Compile Include="Models\CostosServicioModelo.cs" />
     <Compile Include="Models\PlanificacionCargueModelo.cs" />
     <Compile Include="Models\RecepcionVerificacionMercanciasModelo.cs" />
+    <Compile Include="Models\PlanificacionDisposicionModelo.cs" />
+    <Compile Include="Models\InformeFinalModelo.cs" />
+    <Compile Include="Models\TratamientoMercanciasModelo.cs" />
     <Compile Include="Models\RecoleccionMuestraModelo.cs" />
     <Compile Include="Models\ProgramacionServicioModelo.cs" />
     <Compile Include="Models\RequerimientoLogisticoModel.cs" />
