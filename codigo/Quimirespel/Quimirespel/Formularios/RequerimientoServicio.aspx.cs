@@ -101,7 +101,7 @@ namespace Quimirespel.Formularios
             var valor = _repositorio.GetById(id);
         }
 
-        protected void btnImprimir_Click1(object sender, EventArgs e)
+        protected void btnImprimir_Click(object sender, EventArgs e)
         {
             PrintService imprime = new PrintService();
 
