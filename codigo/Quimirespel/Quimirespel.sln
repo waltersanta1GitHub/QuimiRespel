@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quimirespel", "Quimirespel\Quimirespel.csproj", "{3C6FEA49-6051-418E-AD82-1F277872C1CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversorPDF", "ConversorPDF\ConversorPDF.csproj", "{256F7917-5EE8-430F-B800-DBC281B10162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3C6FEA49-6051-418E-AD82-1F277872C1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C6FEA49-6051-418E-AD82-1F277872C1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C6FEA49-6051-418E-AD82-1F277872C1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256F7917-5EE8-430F-B800-DBC281B10162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256F7917-5EE8-430F-B800-DBC281B10162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256F7917-5EE8-430F-B800-DBC281B10162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256F7917-5EE8-430F-B800-DBC281B10162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
