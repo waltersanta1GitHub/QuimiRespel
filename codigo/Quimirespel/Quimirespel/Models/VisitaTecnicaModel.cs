@@ -12,34 +12,39 @@ namespace Quimirespel.Models
         [BsonId]
         public ObjectId ID { get; set; }
 
-        public string NumUnico { get; set; }
+        public BaseModelo CIIU { get; set; }
+        public string Nit { get; set; }
+        public string RazonSocial { get; set; }
+        public int DepartamentoH { get; set; }
+        public CiudadModelo CiudadH { get; set; }
+        public string TelefonoH { get; set; }
+        public string DireccionH { get; set; }
+        public string NombreContactoH { get; set; }
+        public string CelularContactoH { get; set; }
+        public string EmailContactoH { get; set; }
+        public List<VisitaTablaModelo> TablaMercanciasPeligrosas { get; set; }
         public string AsesorAsignado { get; set; }
-        public string Cargo { get; set; }
-        public string Celular { get; set; }
-        public bool Eliminado { get; set; }
-        public string ClosedDate { get; set; }
-        public string CreatedDate { get; set; }
+        public string FechaAsignadaVisita { get; set; }
+        public string HoraAsisgnadaVisita { get; set; }
+        public string EspecificacionesDeSeguridad { get; set; }
+        public string Observaciones { get; set; }
+
+
+        // Informacion Representante
         public string DiligenciadoPor { get; set; }
+        public string CargoDiligenciado { get; set; }
+        public string FechaDiligenciado { get; set; }
+        public string HoraDiligenciado { get; set; }
+        public string TelefonoDiligenciado { get; set; }
+        public string ExtencionDiligenciado { get; set; }
+        public string CelularDiligenciado { get; set; }
+        public int DepartamentoF { get; set; }
+        public CiudadModelo CiudadF { get; set; }
         public string DirAdmin { get; set; }
         public string DirOperativa { get; set; }
-        public bool Editable { get; set; }
-        public string Email { get; set; }
-        public string Extencion { get; set; }
-        public string Fecha { get; set; }
-        public string Hora { get; set; }
-        public string FechaAsignadaVisita { get; set; }
-        public string IdFormulario { get; set; }
-        public string HoraAsisgnadaVisita { get; set; }
-        public string NombreFormulario { get; set; }
-        public List<BaseModelo> LogDocumentos { get; set; }
-        public bool Printed { get; set; }
-        public string RecomendacionesIngreso { get; set; }
-        public bool Visible { get; set; }
-        public string Telefono { get; set; }
-        public BaseModelo CIIU { get; set; }
-        public CiudadModelo Ciudad { get; set; }
-        public CiudadModelo MunicipioDiligencia { get; set; }
-        public List<VisitaTablaModelo> TablaMercanciasPeligrosas { get; set; }
+        public string NumeroSolicitud { get; set; }
 
+        public ControlModelo Control { get; set; }
+                
     }
 }

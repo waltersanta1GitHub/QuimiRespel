@@ -25,15 +25,15 @@ namespace Quimirespel.Data
 
         public void Update(VisitaTecnicaModel model)
         {
-        
-            var client = new MongoClient(CONEXION);
-            var server = client.GetServer();
-            var database = server.GetDatabase(DB);
-            var visitaCollection = database.GetCollection<VisitaTecnicaModel>(NOMBRECOLECCION);
 
-            var query3 = Query<VisitaTecnicaModel>.EQ(fd => fd.ID, model.ID);
-            var update = Update<VisitaTecnicaModel>.Set(e => e.NombreFormulario, model.NombreFormulario);
-            visitaCollection.Update(query3, update);
+            //var client = new MongoClient(CONEXION);
+            //var server = client.GetServer();
+            //var database = server.GetDatabase(DB);
+            //var visitaCollection = database.GetCollection<VisitaTecnicaModel>(NOMBRECOLECCION);
+
+            //var query3 = Query<VisitaTecnicaModel>.EQ(fd => fd.ID, model.ID);
+            //var update = Update<VisitaTecnicaModel>.Set(e => e.NombreFormulario, model.NombreFormulario);
+            //visitaCollection.Update(query3, update);
         }
 
         public VisitaTecnicaModel GetById(string id)
@@ -43,7 +43,7 @@ namespace Quimirespel.Data
             var server = client.GetServer();
             var database = server.GetDatabase(DB);
             var visitaCollection = database.GetCollection<VisitaTecnicaModel>(NOMBRECOLECCION);
-            return visitaCollection.FindOne(Query<VisitaTecnicaModel>.EQ(fd => fd.IdFormulario, id));            
+            return visitaCollection.FindOne(Query<VisitaTecnicaModel>.EQ(fd => fd.NumeroSolicitud, id));            
         }
 
         public List<VisitaTecnicaModel> GetList()

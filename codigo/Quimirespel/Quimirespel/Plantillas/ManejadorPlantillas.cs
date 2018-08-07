@@ -121,7 +121,7 @@ namespace Quimirespel.Plantillas
             contructoEncabezado.Append("<td align=\"center\" class=\"cell-header\"><strong>DIRECCION</strong></td>");
             contructoEncabezado.Append("</tr>");
             contructoEncabezado.Append("<tr>");
-            contructoEncabezado.Append("<td width=\"40% \" height=\"133\" align=\"center\" class=\"cell - content\">"+visitatecnica.Telefono.ToUpper()+ "</td>");
+            contructoEncabezado.Append("<td width=\"40% \" height=\"133\" align=\"center\" class=\"cell - content\">"+visitatecnica.TelefonoH.ToUpper()+ "</td>");
             contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">"+visitatecnica.DirOperativa.ToUpper()+"</td>");
             contructoEncabezado.Append("</tr>");
             contructoEncabezado.Append("</table></td>");
@@ -135,8 +135,8 @@ namespace Quimirespel.Plantillas
             contructoEncabezado.Append("</tr>");
             contructoEncabezado.Append("<tr>");
             contructoEncabezado.Append("<td width=\"40% \" align=\"center\" class=\"cell - content\">Lorem ipsum dolor sit amet</td>");
-            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">" + visitatecnica.Celular.ToUpper() + "</td>");
-            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">"+visitatecnica.Email.ToUpper() + "</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">" + visitatecnica.CelularContactoH.ToUpper() + "</td>");
+            contructoEncabezado.Append("<td align=\"center\" class=\"cell - content\">"+visitatecnica.EmailContactoH.ToUpper() + "</td>");
             contructoEncabezado.Append("</tr>");
             contructoEncabezado.Append("</table></td>");
             contructoEncabezado.Append("</tr>");
@@ -178,9 +178,9 @@ namespace Quimirespel.Plantillas
             contructoPiePagina.Append("</tr>");
             contructoPiePagina.Append("<tr>");
             contructoPiePagina.Append("<td class=\"cell-header - info\">MUNICIPIO</td>");
-            contructoPiePagina.Append("<td colspan=\"5\" class=\"cell-content-info\"><span class=\"cell - content\">"+visitatecnica.MunicipioDiligencia.NomMunicipio+"</span></td>");
+            contructoPiePagina.Append("<td colspan=\"5\" class=\"cell-content-info\"><span class=\"cell - content\">"+visitatecnica.CiudadF.NomCiudad+"</span></td>");
             contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DEPARTAMENTO</td>");
-            contructoPiePagina.Append("<td class=\"cell-content-info\">"+ visitatecnica.MunicipioDiligencia.NomDepto + "</td>");
+            contructoPiePagina.Append("<td class=\"cell-content-info\">"+ visitatecnica.CiudadF.NomCiudad + "</td>");
             contructoPiePagina.Append("</tr>");
             contructoPiePagina.Append("<tr>");
             contructoPiePagina.Append("<td colspan=\"2\" class=\"cell-header-info\">DIRECCION ADMINISTRATIVA</td>");

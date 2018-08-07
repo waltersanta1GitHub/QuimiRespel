@@ -265,6 +265,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\jquery-ui.structure.css" />
@@ -279,6 +280,9 @@
     <Content Include="Account\Web.config" />
     <Content Include="Formularios\Laboratorio\CostosServicio.aspx" />
     <Content Include="Formularios\Laboratorio\AnalisisLaboratorio.aspx" />
+    <Content Include="Formularios\Operativa\InformeFinal.aspx" />
+    <Content Include="Formularios\Operativa\PlanificacionDisposicionFinal.aspx" />
+    <Content Include="Formularios\Operativa\PlanificacionTratamientoResiduos.aspx" />
     <Content Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx" />
     <Content Include="Formularios\Transporte\ListaVerificacionVehiculo.aspx" />
     <Content Include="Formularios\Transporte\ManifiestoCarga.aspx" />
@@ -295,18 +299,101 @@
     <Content Include="mingwm10.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="ssleay32.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="wkhtmltox0.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\bootstrap-datetimepicker-build.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Formularios\CotizacionServicio.aspx" />
-    <Content Include="Formularios\RecoleccionMuestras.aspx" />
-    <Content Include="Formularios\RequerimientoLogistico.aspx" />
-    <Content Include="Formularios\RequerimientoServicio.aspx" />
-    <Content Include="Formularios\VisitaTecnica.aspx" />
+    <Content Include="Formularios\Comercial\CotizacionServicio.aspx" />
+    <Content Include="Formularios\Comercial\RecoleccionMuestras.aspx" />
+    <Content Include="Formularios\Comercial\RequerimientoLogistico.aspx" />
+    <Content Include="Formularios\Comercial\RequerimientoServicio.aspx" />
+    <Content Include="Formularios\Comercial\VisitaTecnica.aspx" />
     <Content Include="MongoDataService.svc" />
     <Content Include="PDFPrinter.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -483,6 +570,14 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Data\ItemRepositorios\RepositorioUsuarios.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioDepartamentoCiudad.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioCiiu.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioEstadosMateriales.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioEstadosEmbalaje.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioEmbalaje.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioEstados.cs" />
+    <Compile Include="Data\ItemRepositorios\RepositorioUnidades.cs" />
     <Compile Include="Data\RepositorioCotizacionServicio.cs" />
     <Compile Include="Data\RepositorioAnalisisLaboratorio.cs" />
     <Compile Include="Data\RepositorioCostosServicio.cs" />
@@ -502,11 +597,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CotizacionServicio.aspx.cs">
+    <Compile Include="Formularios\Comercial\CotizacionServicio.aspx.cs">
       <DependentUpon>CotizacionServicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\CotizacionServicio.aspx.designer.cs">
+    <Compile Include="Formularios\Comercial\CotizacionServicio.aspx.designer.cs">
       <DependentUpon>CotizacionServicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Laboratorio\CostosServicio.aspx.cs">
@@ -523,6 +618,27 @@
     <Compile Include="Formularios\Laboratorio\AnalisisLaboratorio.aspx.designer.cs">
       <DependentUpon>AnalisisLaboratorio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Operativa\InformeFinal.aspx.cs">
+      <DependentUpon>InformeFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Operativa\InformeFinal.aspx.designer.cs">
+      <DependentUpon>InformeFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Operativa\PlanificacionDisposicionFinal.aspx.cs">
+      <DependentUpon>PlanificacionDisposicionFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Operativa\PlanificacionDisposicionFinal.aspx.designer.cs">
+      <DependentUpon>PlanificacionDisposicionFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Operativa\PlanificacionTratamientoResiduos.aspx.cs">
+      <DependentUpon>PlanificacionTratamientoResiduos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Operativa\PlanificacionTratamientoResiduos.aspx.designer.cs">
+      <DependentUpon>PlanificacionTratamientoResiduos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx.cs">
       <DependentUpon>RecepcionVerificacionMercancias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -530,25 +646,25 @@
     <Compile Include="Formularios\Operativa\RecepcionVerificacionMercancias.aspx.designer.cs">
       <DependentUpon>RecepcionVerificacionMercancias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RecoleccionMuestras.aspx.cs">
+    <Compile Include="Formularios\Comercial\RecoleccionMuestras.aspx.cs">
       <DependentUpon>RecoleccionMuestras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\RecoleccionMuestras.aspx.designer.cs">
+    <Compile Include="Formularios\Comercial\RecoleccionMuestras.aspx.designer.cs">
       <DependentUpon>RecoleccionMuestras.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RequerimientoLogistico.aspx.cs">
+    <Compile Include="Formularios\Comercial\RequerimientoLogistico.aspx.cs">
       <DependentUpon>RequerimientoLogistico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\RequerimientoLogistico.aspx.designer.cs">
+    <Compile Include="Formularios\Comercial\RequerimientoLogistico.aspx.designer.cs">
       <DependentUpon>RequerimientoLogistico.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RequerimientoServicio.aspx.cs">
+    <Compile Include="Formularios\Comercial\RequerimientoServicio.aspx.cs">
       <DependentUpon>RequerimientoServicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\RequerimientoServicio.aspx.designer.cs">
+    <Compile Include="Formularios\Comercial\RequerimientoServicio.aspx.designer.cs">
       <DependentUpon>RequerimientoServicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Transporte\ListaVerificacionVehiculo.aspx.cs">
@@ -579,11 +695,11 @@
     <Compile Include="Formularios\Transporte\ProgramacionServicio.aspx.designer.cs">
       <DependentUpon>ProgramacionServicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\VisitaTecnica.aspx.cs">
+    <Compile Include="Formularios\Comercial\VisitaTecnica.aspx.cs">
       <DependentUpon>VisitaTecnica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\VisitaTecnica.aspx.designer.cs">
+    <Compile Include="Formularios\Comercial\VisitaTecnica.aspx.designer.cs">
       <DependentUpon>VisitaTecnica.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -592,13 +708,17 @@
     <Compile Include="Models\AnalisisLaboratorioModelo.cs" />
     <Compile Include="Models\BaseModelo.cs" />
     <Compile Include="Models\CiudadModelo.cs" />
+    <Compile Include="Models\ControlModelo.cs" />
     <Compile Include="Models\CotizacionServicioModelo.cs" />
+    <Compile Include="Models\DepartamentoModelo.cs" />
+    <Compile Include="Models\Enums\EnumFormularios.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ListaVerificacionModel.cs" />
     <Compile Include="Models\ManifiestoCargaModelo.cs" />
     <Compile Include="Models\Nonu.cs" />
     <Compile Include="Models\CostosServicioModelo.cs" />
     <Compile Include="Models\PlanificacionCargueModelo.cs" />
+    <Compile Include="Models\PlanificacionDisposicionFinalModelo.cs" />
     <Compile Include="Models\RecepcionVerificacionMercanciasModelo.cs" />
     <Compile Include="Models\RecoleccionMuestraModelo.cs" />
     <Compile Include="Models\ProgramacionServicioModelo.cs" />
@@ -615,10 +735,14 @@
     <Compile Include="Models\Tablas\ManifiestoCargaTablaDos.cs" />
     <Compile Include="Models\Tablas\ManifiestoCargaTablaUno.cs" />
     <Compile Include="Models\Tablas\PlanificacionCargueTablaUno.cs" />
+    <Compile Include="Models\Tablas\PlanificacionDisposicionFinalTablaModelo.cs" />
     <Compile Include="Models\Tablas\ProgramacionServicioTablaModelo.cs" />
     <Compile Include="Models\Tablas\RecepcionVerificacionTablaModelo.cs" />
     <Compile Include="Models\Tablas\ReqServicioTablaModelo.cs" />
     <Compile Include="Models\Tablas\VisitaTablaModelo.cs" />
+    <Compile Include="Models\Usuarios\RolUsuario.cs" />
+    <Compile Include="Models\Usuarios\TipoUsuario.cs" />
+    <Compile Include="Models\Usuarios\UsuarioModelo.cs" />
     <Compile Include="Models\VisitaTecnicaModel.cs" />
     <Compile Include="MongoDataService.cs" />
     <Compile Include="PDFPrinter.aspx.cs">
@@ -651,6 +775,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Util\Helper.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

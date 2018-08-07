@@ -40,7 +40,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -52,56 +52,57 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Nosotros</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>                        
+                        <li><a runat="server" href="~/">Inicio</a></li>                                           
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comercial
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a runat="server" class="dropdown-item" href="~/Formularios/VisitaTecnica">1-Visita Tecnica</a>
-                                <a runat="server" class="dropdown-item" href="~/Formularios/RequerimientoServicio">2-Requerimiento Servicio</a>
-                                <a runat="server" class="dropdown-item" href="~/Formularios/RequerimientoLogistico">3- Requerimiento Logistico</a>
+                                <a  runat="server" class="dropdown-item"  href="Formularios/Comercial/VisitaTecnica.aspx">Visita Tecnica</a>
+                                <a  runat="server" class="dropdown-item"  href="Formularios/Comercial/RequerimientoServicio.aspx">Requerimiento Servicio</a>
+                                <a  runat="server" class="dropdown-item"  href="Formularios/Comercial/RequerimientoLogistico.aspx">Requerimiento Logistico</a>
+                                <a  runat="server" class="dropdown-item"  href="Formularios/Comercial/RecoleccionMuestras.aspx">Recoleccion Muestras</a>
+                                <a  runat="server" class="dropdown-item"  href="Formularios/Comercial/CotizacionServicio.aspx">Cotizacion Servicio</a>                             
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laboratorio
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laboratorio
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a runat="server" class="dropdown-item" href="~/Formularios/VisitaTecnica">1-Visita Tecnica</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a runat="server" class="dropdown-item"   href="Formularios/Laboratorio/AnalisisLaboratorio.aspx">Analisis de Laboratorio</a>
+                                <a runat="server" class="dropdown-item"  href="Formularios/Laboratorio/CostosServicio.aspx">Costos de Servicio</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transporte
+                            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operativa
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a runat="server" class="dropdown-item" href="~/Formularios/VisitaTecnica">1-Visita Tecnica</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a runat="server" class="dropdown-item"  href ="Formularios/Operativa/InformeFinal.aspx">Informe Final</a>
+                                <a runat="server" class="dropdown-item"  href="Formularios/Operativa/PlanificacionDisposicionFinal.aspx">Planificacion De DisposicionFinal</a>
+                                <a runat="server" class="dropdown-item"  href="Formularios/Operativa/PlanificacionTratamientoResiduos.aspx">Planificacion De Tratamiento de Residuos</a>
+                                <a runat="server" class="dropdown-item"  href="Formularios/Operativa/RecepcionVerificacionMercancias.aspx">Recepcion y Verificacion Mercancias</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operativa
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transporte
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a runat="server" class="dropdown-item" href="~/Formularios/VisitaTecnica">1-Visita Tecnica</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a runat="server" class="dropdown-item" href="Formularios/Transporte/ListaVerificacionVehiculo.aspx">Lista De Verificacion De Vehiculo</a>
+                                <a runat="server" class="dropdown-item" href="Formularios/Transporte/ManifiestoCarga.aspx">Manifiesto De Carga</a>
+                                <a runat="server" class="dropdown-item" href="Formularios/Transporte/PlanificacionCargue.aspx">Planificacion de Cargue</a>
+                                <a runat="server" class="dropdown-item" href="Formularios/Transporte/ProgramacionServicio.aspx">Programacion de Servicio</a>
                             </div>
                         </li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li><a runat="server" href="~/Account/Register">Registro</a></li>
+                                <li><a runat="server" href="~/Account/Login">Ingresar</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
@@ -116,7 +117,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Quimirespel</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Quimirespel Derechos Reservados</p>
             </footer>
         </div>
     </form>
